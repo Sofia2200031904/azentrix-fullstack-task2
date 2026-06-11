@@ -92,10 +92,15 @@ The frontend and backend are served together from a single Node.js application. 
 
 ## Public Link
 
-**https://YOUR-RENDER-URL.onrender.com**
-
-## Video Demo
+**https://azentrix-fullstack-task2-7xuw.onrender.com/**
 
 Loom Demo Link:
 
-**https://www.loom.com/share/YOUR-LOOM-LINK**
+**https://www.loom.com/share/266cfba5a2e44a57a75b24b234245126**
+
+## Video Demo 
+
+
+https://github.com/user-attachments/assets/19eb962d-6bda-4cb4-b113-4f8505ee7645
+
+
