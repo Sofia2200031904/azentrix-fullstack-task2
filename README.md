@@ -1,112 +1,61 @@
-# Azentrix Fullstack Task 2 - Multi-User Task Management System
+# Sofia's TaskFlow - Multi-User Task Management System
 
-TaskFlow is a self-hostable mini Trello for remote teams. It includes registration/login, JWT-style authentication, multiple boards, draggable Kanban cards, admin user management, role-based permissions, and near real-time updates with WebSockets.
+A responsive, full-stack task management web app built for Azentrix Full Stack Developer Intern Task 2. Sofia's TaskFlow gives teams a focused workspace to create project boards, manage tasks, assign work, track progress, and collaborate with real-time updates.
 
-## Live Demo
+## Default Login
 
-Paste your deployed links after publishing:
+Admin Username: `admin`  
+Admin Password: `Admin@123`
 
-```text
-Live Demo: https://your-taskflow-app.onrender.com
-API: https://your-taskflow-app.onrender.com/api/boards
-Loom Video: https://loom.com/share/your-video-id
-```
+Member Username: `user`  
+Member Password: `User@123`
 
-This project serves the frontend and backend from one Node app, so one Render/Railway deployment is enough. You can still deploy frontend/backend separately later if you split `public/` and `server.js`.
+## Features
 
-## Demo Credentials
-
-| Role | Username | Password |
-| --- | --- | --- |
-| Admin | `admin` | `Admin@123` |
-| Member | `user` | `User@123` |
-
-New users can register from the registration panel. Registered users are members by default.
-
-## Default Data Included
-
-The app starts with useful sample data so the demo does not look empty.
-
-Default users:
-
-| Name | Username | Role | Password |
-| --- | --- | --- | --- |
-| Admin | `admin` | Admin | `Admin@123` |
-| User | `user` | Member | `User@123` |
-
-Default boards:
-
-| Board | Sample Cards |
-| --- | --- |
-| Website Redesign | Finalize sprint goals, Write onboarding checklist, Review API errors, Create project board |
-| Marketing Team | Plan launch campaign, Schedule social posts, Collect brand assets |
-| Mobile App | Design onboarding wireframes, Build push notification settings, Prepare beta release notes |
-| Product Roadmap | Interview power users, Draft roadmap specs, Prioritize feature votes |
-| Customer Support | Triage open tickets, Update help center article, Summarize feedback themes |
-| Sales Pipeline | Qualify inbound leads, Prepare pricing proposals, Send follow-up emails |
-| Content Calendar | Pick blog topics, Draft launch blog, Publish newsletter |
-| QA Testing | Run regression checklist, Verify bug fixes, Complete release sign-off |
-| DevOps Automation | Document environment variables, Check deployment pipeline, Back up demo data |
-
-The default data is created automatically in `data/db.json` the first time the server runs. If `data/db.json` already exists, the app keeps existing users/cards and adds any missing default demo cards.
-
-## Feature Checklist
-
-| Requirement | Status |
-| --- | --- |
-| User registration | Done |
-| User login | Done |
-| JWT-style auth token | Done |
-| Backend API | Done |
-| Persistent storage | Done with local JSON file |
-| Multiple boards | Done |
-| Board create/delete/open | Done |
-| To Do / In Progress / Done columns | Done |
-| Draggable cards | Done |
-| Title, description, assignee, due date, priority | Done |
-| Real-time updates | Done with WebSockets |
-| Admin user management | Done |
-| Add/edit/delete users | Done |
-| Assign Admin/Member role | Done |
-| Member card permissions | Done |
-| Search and priority filter | Bonus done |
-| Dark mode | Bonus done |
-| Activity log | Bonus done |
-| Dashboard statistics | Bonus done |
+- User registration and login
+- JWT-style authentication with token-based sessions
+- Admin and member roles
+- Create, open, and delete project boards
+- 9 default project boards with sample tasks
+- To Do, In Progress, and Done Kanban columns
+- Add, edit, and delete task cards
+- Record task title, description, assignee, due date, and priority
+- Drag and drop cards between columns
+- Admin can manage all cards and users
+- Members can manage only their own or assigned cards
+- Add, edit, delete, and role-update users from the admin panel
+- Real-time workspace updates with WebSockets
+- Search tasks by title or description
+- Filter tasks by priority
+- Dashboard summary with total cards, completed cards, and users
+- Activity log for important project actions
+- Persistent light and dark modes
+- Persistent backend data with a local JSON database
+- Responsive desktop, tablet, and mobile layouts
 
 ## Tech Stack
 
-- Frontend: HTML, CSS, vanilla JavaScript
-- Backend: Node.js HTTP server
-- Realtime: Native WebSocket protocol
-- Authentication: signed JWT-style token stored in localStorage and HttpOnly cookie
-- Database: `data/db.json` local JSON persistence
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Node.js HTTP server
+- Native WebSocket protocol
+- Crypto-based password hashing
+- Signed JWT-style authentication
+- Local JSON file database using `data/db.json`
 
-No external npm packages are required, so setup is very fast.
+The project intentionally uses no third-party npm package. This keeps setup quick and makes the frontend, backend, authentication, API routes, WebSocket handling, and storage logic easy to review.
 
-## Do We Need A Separate Database?
+## Setup
 
-No, a separate database is not required for this submission.
+Clone the repository using the requested Task 2 name:
 
-This project already has a backend and stores data in a local JSON file:
-
-```text
-data/db.json
+```bash
+git clone https://github.com/Sofia2200031904/azentrix-fullstack-task2.git
+cd azentrix-fullstack-task2
 ```
 
-That means users, boards, cards, roles, and activity logs are saved even after restarting the local server. For the internship demo, this is enough because the task says the app should be self-hostable and does not strictly require MongoDB.
-
-Use MongoDB Atlas only if you want stronger production persistence on free hosting. If you deploy to Render free tier, local JSON can work for the demo, but some free hosts may reset local files after redeploys or restarts. For a simple internship submission, you can write in README:
-
-```text
-Database: Local JSON file storage using data/db.json.
-No external database setup is required to run the project locally.
-MongoDB Atlas can be connected later for production persistence.
-```
-
-## Run Locally
-
-Install Node.js 18 or newer.
+Start the full-stack Node app:
 
 ```bash
 npm start
@@ -118,55 +67,52 @@ Open:
 http://localhost:3000
 ```
 
+Sign in using:
+
+```text
+admin / Admin@123
+```
+
+or:
+
+```text
+user / User@123
+```
+
 Optional environment variables:
 
-```bash
+```text
 PORT=3000
 JWT_SECRET=replace-with-a-long-random-secret
 ```
 
-## Important Test Steps
+## Approach
 
-### Registration
+The app is organized into a small full-stack structure:
 
-1. Open `http://localhost:3000`.
-2. Use the Register Member form.
-3. A new member account is created and logged in automatically.
+- `public/index.html` contains the login screen, registration form, workspace layout, board area, card form, admin panel, filters, and activity log.
+- `public/styles.css` defines the visual design, dark mode, board layout, draggable cards, responsive breakpoints, and dashboard styling.
+- `public/app.js` manages frontend authentication, API calls, board rendering, card CRUD operations, drag-and-drop behavior, filters, WebSocket updates, and UI state.
+- `server.js` contains the backend HTTP server, static file serving, authentication, API routes, password hashing, signed token handling, WebSocket broadcasting, role permissions, and JSON database persistence.
+- `data/db.json` stores users, boards, cards, and activity logs.
 
-### Admin Panel
+The frontend and backend are served together from one Node app. The backend updates `data/db.json` whenever users, boards, cards, or roles change. The frontend refreshes automatically when the backend broadcasts workspace changes through WebSockets.
 
-1. Log in as `admin` / `Admin@123`.
-2. Open the Admin Users section.
-3. Add a user, edit the user name/role/password, then delete the user.
+## Default Project Boards
 
-### Multiple Boards
+- Website Redesign
+- Marketing Team
+- Mobile App
+- Product Roadmap
+- Customer Support
+- Sales Pipeline
+- Content Calendar
+- QA Testing
+- DevOps Automation
 
-1. Log in.
-2. Use the Boards form to create boards like `Website Redesign`, `Marketing Team`, and `Mobile App`.
-3. Click a board name to open it.
-4. Delete a board with the Delete button. At least one board must remain.
+## Important Note For Drag And Drop
 
-### Real-Time Updates
-
-1. Open Browser 1 and log in as admin.
-2. Open Browser 2 or an incognito window and log in as user.
-3. Keep both browsers on the same board.
-4. Create, edit, delete, or drag a card in Browser 1.
-5. Browser 2 updates automatically without refresh.
-
-### Role Permissions
-
-1. Log in as admin and create a card assigned to admin.
-2. Log in as user.
-3. The user can see the admin card but cannot edit, delete, or drag it unless assigned to that card.
-4. Admin can manage all cards.
-
-### Drag And Drop Notes
-
-- Log in as `admin` / `Admin@123` to test drag-and-drop on every card.
-- Members can drag only cards they created or cards assigned to them.
-- If a card shows the view-only permission note, drag is intentionally disabled for that user.
-- Drag a card over another column and release it anywhere inside the column.
+Admin can drag every card. Members can drag only cards they created or cards assigned to them. If a card shows a view-only permission message, drag-and-drop is intentionally disabled for that member.
 
 ## API Routes
 
@@ -188,177 +134,41 @@ PUT    /api/users/:userId
 DELETE /api/users/:userId
 ```
 
-## Backend / Database Connection
+## Deployment
 
-This submission uses a local JSON database at:
+This project deploys the frontend and backend together as one Node web service.
 
-```text
-data/db.json
-```
-
-That file persists users, boards, cards, and activity logs across server restarts on the same machine.
-
-For production free-tier deployment, local JSON storage is acceptable for a small self-hosted demo but can reset if the hosting platform uses an ephemeral filesystem.
-
-You do not need MongoDB to run or submit this project. If an evaluator asks where the database is, answer:
+Recommended Render settings:
 
 ```text
-The backend stores application data in data/db.json. It is a lightweight file database suitable for a self-hosted demo. The server creates and updates this file automatically.
-```
-
-To connect MongoDB Atlas later:
-
-1. Create a MongoDB Atlas cluster.
-2. Add an environment variable:
-
-```text
-MONGODB_URI=mongodb+srv://username:password@cluster-name.mongodb.net/taskflow
-```
-
-3. Replace the `loadData()` and `saveData()` functions in `server.js` with MongoDB collection calls for `users`, `boards`, `cards`, and `activity`.
-4. Keep the same API route names so the frontend does not need major changes.
-
-## Deploy On Render
-
-1. Push the project to GitHub using this repository name:
-
-```text
-azentrix-fullstack-task2
-```
-
-2. Go to Render and create a new Web Service.
-3. Connect your GitHub repository.
-4. Use these settings:
-
-```text
-Runtime: Node
 Build Command: npm install
 Start Command: npm start
 ```
 
-5. Add environment variable:
+Add this environment variable:
 
 ```text
 JWT_SECRET=your-long-random-secret
 ```
 
-6. Deploy.
-7. Copy the Render URL into the Live Demo section.
+## Public Link
 
-After deployment, test:
+GitHub Repository: https://github.com/Sofia2200031904/azentrix-fullstack-task2
 
-```text
-https://your-app-name.onrender.com
-https://your-app-name.onrender.com/api/boards
-```
+Live Demo: Add your deployed Render or Railway link here after deployment.
 
-The `/api/boards` URL requires login token in normal browser use, so the main live demo link is the most important link to share.
+## Video Demo
 
-## Deploy On Railway
-
-Railway also works because this is a single Node app.
-
-1. Push the project to GitHub.
-2. Open Railway and create a new project.
-3. Choose Deploy from GitHub Repo.
-4. Select `azentrix-fullstack-task2`.
-5. Add environment variable:
+Demo video file:
 
 ```text
-JWT_SECRET=your-long-random-secret
+TaskFlow_Demo_Video.mp4
 ```
 
-6. Railway should detect Node automatically.
-7. Set start command if asked:
-
-```text
-npm start
-```
-
-8. Copy the generated Railway URL into the README.
-
-## Upload To GitHub
-
-Run these commands from the project folder:
-
-```bash
-git init
-git add .
-git commit -m "Build Azentrix fullstack task management app"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/azentrix-fullstack-task2.git
-git push -u origin main
-```
-
-If Git says the remote already exists:
-
-```bash
-git remote set-url origin https://github.com/YOUR_USERNAME/azentrix-fullstack-task2.git
-git push -u origin main
-```
-
-If Git is not installed, install it from:
-
-```text
-https://git-scm.com/downloads
-```
-
-If Git asks for login, use GitHub browser authentication or a GitHub personal access token.
-
-Before pushing, check files:
-
-```bash
-git status
-```
-
-Repository name should be:
-
-```text
-azentrix-fullstack-task2
-```
-
-## Loom Demo Video
-
-Use this quick recording flow:
-
-1. Open the deployed app.
-2. Show login with `user` / `User@123`.
-3. Show registration by creating a new member.
-4. Log in as admin.
-5. Show Admin Users: add, edit role, delete user.
-6. Create a new board and open it.
-7. Create a card with assignee, due date, and priority.
-8. Drag the card across To Do, In Progress, and Done.
-9. Open a second browser logged in as user and show the realtime update.
-10. Show that user cannot edit/delete an admin-owned card unless assigned.
-11. End by showing the README with live link and credentials.
-
-Paste the Loom link in the Live Demo section before submission.
+Loom demo link: Add your Loom link here after uploading or recording.
 
 ## Screenshots
-
-Demo views included in this repository:
 
 ![Login demo](screenshots/login-demo.svg)
 
 ![Board and admin demo](screenshots/board-demo.svg)
-
-## Project Structure
-
-```text
-.
-|-- data/
-|   `-- db.json
-|-- public/
-|   |-- app.js
-|   |-- index.html
-|   `-- styles.css
-|-- screenshots/
-|   |-- board-demo.svg
-|   `-- login-demo.svg
-|-- .env.example
-|-- .gitignore
-|-- package.json
-|-- README.md
-`-- server.js
-```
