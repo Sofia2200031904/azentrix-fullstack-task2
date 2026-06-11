@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TaskFlow Board</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main id="authView" class="auth-shell">
+      <section class="auth-panel">
+        <p class="eyebrow">Self-hosted team board</p>
+        <h1>TaskFlow</h1>
+        <p class="lede">A lightweight multi-user task board with roles, multiple boards, draggable cards, and live updates.</p>
+        <form id="loginForm" class="form-stack">
+          <label>Username <input id="loginUsername" autocomplete="username" value="user" required /></label>
+          <label>Password <input id="loginPassword" type="password" autocomplete="current-password" value="User@123" required /></label>
+          <button type="submit">Log in</button>
+          <p class="hint">Member: user / User@123 | Admin: admin / Admin@123</p>
+        </form>
+      </section>
+
+      <section class="register-panel">
+        <h2>Register Member</h2>
+        <form id="registerForm" class="form-stack">
+          <label>Name <input id="registerName" autocomplete="name" required /></label>
+          <label>Username <input id="registerUsername" autocomplete="username" required /></label>
+          <label>Password <input id="registerPassword" type="password" autocomplete="new-password" required /></label>
+          <button type="submit" class="secondary">Register</button>
+        </form>
+      </section>
+    </main>
+
+    <main id="appView" class="app-shell hidden">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Remote team workspace</p>
+          <h1>TaskFlow Board</h1>
+        </div>
+        <div class="topbar-actions">
+          <span id="socketStatus" class="status-dot">Offline</span>
+          <span id="currentUser" class="user-pill"></span>
+          <button id="themeToggle" class="ghost" type="button">Dark Mode</button>
+          <button id="logoutBtn" class="ghost" type="button">Log out</button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <aside class="side-panel">
+          <section>
+            <h2>Boards</h2>
+            <form id="boardForm" class="inline-form">
+              <input id="boardTitle" placeholder="New board name" required />
+              <button type="submit">Add</button>
+            </form>
+            <div id="boardList" class="board-list"></div>
+          </section>
+
+          <section>
+            <h2 id="cardFormTitle">New Card</h2>
+            <form id="cardForm" class="form-stack compact">
+              <input id="cardId" type="hidden" />
+              <label>Title <input id="cardTitle" maxlength="80" required /></label>
+              <label>Description <textarea id="cardDescription" rows="3"></textarea></label>
+              <label>Assignee <select id="cardAssignee"></select></label>
+              <label>Due date <input id="cardDueDate" type="date" /></label>
+              <label>Priority
+                <select id="cardPriority">
+                  <option>Low</option>
+                  <option selected>Medium</option>
+                  <option>High</option>
+                </select>
+              </label>
+              <div class="split-actions">
+                <button type="submit">Save</button>
+                <button id="resetCardForm" type="button" class="ghost">Clear</button>
+              </div>
+            </form>
+          </section>
+
+          <section id="adminPanel" class="admin-panel hidden">
+            <h2>Admin Users</h2>
+            <form id="userForm" class="form-stack compact">
+              <input id="editUserId" type="hidden" />
+              <input id="newUserName" placeholder="Name" required />
+              <input id="newUsername" placeholder="Username" required />
+              <input id="newUserPassword" placeholder="Password, optional while editing" value="User@123" />
+              <select id="newUserRole">
+                <option value="member">Member</option>
+                <option value="admin">Admin</option>
+              </select>
+              <div class="split-actions">
+                <button type="submit" class="secondary">Save User</button>
+                <button id="resetUserForm" type="button" class="ghost">Clear</button>
+              </div>
+            </form>
+            <div id="userList" class="user-list"></div>
+          </section>
+        </aside>
+
+        <section class="main-panel">
+          <div class="board-toolbar">
+            <div>
+              <h2 id="activeBoardTitle">Board</h2>
+              <p id="statsLine" class="muted"></p>
+            </div>
+            <div class="filters">
+              <input id="searchInput" placeholder="Search tasks" />
+              <select id="priorityFilter">
+                <option value="all">All priorities</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
+          </div>
+          <section id="board" class="board" aria-label="Task board"></section>
+          <section class="activity-panel">
+            <h2>Activity Log</h2>
+            <div id="activityList" class="activity-list"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,700 @@
+{
+  "users": [
+    {
+      "id": "user_admin",
+      "username": "admin",
+      "name": "Admin",
+      "role": "admin",
+      "passwordHash": "808d505adde73d89c57a37c0363eff30:9de0aa3c61ac59815cd534e114f02aa4847eb577437ecdec12d07de2d47dd9ed3c6b106cde81101ae572c74940eb68bc18cb253229a5d0f4991656416e42777d",
+      "createdAt": "2026-06-09T19:34:31.613Z"
+    },
+    {
+      "id": "user_member",
+      "username": "user",
+      "name": "User",
+      "role": "member",
+      "passwordHash": "7809170fcbb007c624de94306844844d:79bf5b4edc15bf25cfbd68283b875afb7de4d8eb5838feba6a690429f9accb8a36751ba3edeafad31da07597a54f51c3c2b32de1e4057403d7a934715321df20",
+      "createdAt": "2026-06-09T19:34:31.685Z"
+    },
+    {
+      "id": "user_98c3738f32d5aff1",
+      "username": "smilysesi123@gmail.com",
+      "name": "CHALLA SMILE SOFIA",
+      "role": "member",
+      "passwordHash": "7a9711adcdcc8a630110bef745015fd8:595ff59e6c71982997bacf8bf575a61c5a5906413ee5aff444c048f43a3ebd2e608e0a1b45fc752a8e05cdd86283507e70a44937bd3a592e5120e85d8cbc8e5a",
+      "createdAt": "2026-06-09T19:38:36.617Z"
+    },
+    {
+      "id": "user_15cbc66195d53c3e",
+      "username": "chudhamchudham07@gmail.com",
+      "name": "Sesi S",
+      "role": "member",
+      "passwordHash": "f346cd68a8e9c124f01db964f12069a8:21ad1acc710ddcf2853c8c901e70e484c1d9d33e48b8cdc9f7932ec469288be4777e725191c4b3acc8c35edb5d63309c461e70cd5969d2bfd779ffabbd4d35f5",
+      "createdAt": "2026-06-11T16:34:04.104Z"
+    }
+  ],
+  "boards": [
+    {
+      "id": "board_sprint",
+      "title": "Website Redesign",
+      "columns": [
+        {
+          "id": "col_sprint_todo",
+          "title": "To Do",
+          "cardIds": [
+            "card_copy",
+            "card_plan"
+          ]
+        },
+        {
+          "id": "col_sprint_doing",
+          "title": "In Progress",
+          "cardIds": [
+            "card_api"
+          ]
+        },
+        {
+          "id": "col_sprint_done",
+          "title": "Done",
+          "cardIds": [
+            "card_setup"
+          ]
+        }
+      ],
+      "createdBy": "user_admin",
+      "createdAt": "2026-06-09T19:34:31.526Z"
+    },
+    {
+      "id": "board_marketing",
+      "title": "Marketing Team",
+      "columns": [
+        {
+          "id": "col_marketing_todo",
+          "title": "To Do",
+          "cardIds": [
+            "card_campaign"
+          ]
+        },
+        {
+          "id": "col_marketing_doing",
+          "title": "In Progress",
+          "cardIds": [
+            "card_social"
+          ]
+        },
+        {
+          "id": "col_marketing_done",
+          "title": "Done",
+          "cardIds": [
+            "card_brand"
+          ]
+        }
+      ],
+      "createdBy": "user_admin",
+      "createdAt": "2026-06-09T19:34:31.535Z"
+    },
+    {
+      "id": "board_mobile",
+      "title": "Mobile App",
+      "columns": [
+        {
+          "id": "col_mobile_todo",
+          "title": "To Do",
+          "cardIds": [
+            "card_wireframes"
+          ]
+        },
+        {
+          "id": "col_mobile_doing",
+          "title": "In Progress",
+          "cardIds": [
+            "card_push"
+          ]
+        },
+        {
+          "id": "col_mobile_done",
+          "title": "Done",
+          "cardIds": [
+            "card_release"
+          ]
+        }
+      ],
+      "createdBy": "user_member",
+      "createdAt": "2026-06-09T19:34:31.536Z"
+    },
+    {
+      "id": "board_roadmap",
+      "title": "Product Roadmap",
+      "columns": [
+        {
+          "id": "col_roadmap_todo",
+          "title": "To Do",
+          "cardIds": [
+            "card_research"
+          ]
+        },
+        {
+          "id": "col_roadmap_doing",
+          "title": "In Progress",
+          "cardIds": [
+            "card_specs"
+          ]
+        },
+        {
+          "id": "col_roadmap_done",
+          "title": "Done",
+          "cardIds": [
+            "card_votes"
+          ]
+        }
+      ],
+      "createdBy": "user_admin",
+      "createdAt": "2026-06-11T16:26:50.963Z"
+    },
+    {
+      "id": "board_support",
+      "title": "Customer Support",
+      "columns": [
+        {
+          "id": "col_support_todo",
+          "title": "To Do",
+          "cardIds": [
+            "card_triage"
+          ]
+        },
+        {
+          "id": "col_support_doing",
+          "title": "In Progress",
+          "cardIds": [
+            "card_kb"
+          ]
+        },
+        {
+          "id": "col_support_done",
+          "title": "Done",
+          "cardIds": [
+            "card_feedback"
+          ]
+        }
+      ],
+      "createdBy": "user_admin",
+      "createdAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "board_sales",
+      "title": "Sales Pipeline",
+      "columns": [
+        {
+          "id": "col_sales_todo",
+          "title": "To Do",
+          "cardIds": [
+            "card_leads"
+          ]
+        },
+        {
+          "id": "col_sales_doing",
+          "title": "In Progress",
+          "cardIds": [
+            "card_proposals"
+          ]
+        },
+        {
+          "id": "col_sales_done",
+          "title": "Done",
+          "cardIds": [
+            "card_followups"
+          ]
+        }
+      ],
+      "createdBy": "user_admin",
+      "createdAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "board_content",
+      "title": "Content Calendar",
+      "columns": [
+        {
+          "id": "col_content_todo",
+          "title": "To Do",
+          "cardIds": [
+            "card_topics"
+          ]
+        },
+        {
+          "id": "col_content_doing",
+          "title": "In Progress",
+          "cardIds": [
+            "card_draft"
+          ]
+        },
+        {
+          "id": "col_content_done",
+          "title": "Done",
+          "cardIds": [
+            "card_publish"
+          ]
+        }
+      ],
+      "createdBy": "user_member",
+      "createdAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "board_qa",
+      "title": "QA Testing",
+      "columns": [
+        {
+          "id": "col_qa_todo",
+          "title": "To Do",
+          "cardIds": [
+            "card_regression"
+          ]
+        },
+        {
+          "id": "col_qa_doing",
+          "title": "In Progress",
+          "cardIds": [
+            "card_bugs"
+          ]
+        },
+        {
+          "id": "col_qa_done",
+          "title": "Done",
+          "cardIds": [
+            "card_signoff"
+          ]
+        }
+      ],
+      "createdBy": "user_admin",
+      "createdAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "board_devops",
+      "title": "DevOps Automation",
+      "columns": [
+        {
+          "id": "col_devops_todo",
+          "title": "To Do",
+          "cardIds": [
+            "card_env"
+          ]
+        },
+        {
+          "id": "col_devops_doing",
+          "title": "In Progress",
+          "cardIds": [
+            "card_pipeline"
+          ]
+        },
+        {
+          "id": "col_devops_done",
+          "title": "Done",
+          "cardIds": [
+            "card_backup"
+          ]
+        }
+      ],
+      "createdBy": "user_admin",
+      "createdAt": "2026-06-11T16:26:50.980Z"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card_plan",
+      "boardId": "board_sprint",
+      "columnId": "col_sprint_todo",
+      "title": "Finalize sprint goals",
+      "description": "Agree on this week's most important outcomes.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "High",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:33:52.417Z"
+    },
+    {
+      "id": "card_copy",
+      "boardId": "board_sprint",
+      "columnId": "col_sprint_todo",
+      "title": "Write onboarding checklist",
+      "description": "Keep it short enough for a new teammate to finish quickly.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Medium",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-09T19:34:31.685Z"
+    },
+    {
+      "id": "card_api",
+      "boardId": "board_sprint",
+      "columnId": "col_sprint_doing",
+      "title": "Review API errors",
+      "description": "Check recent auth failures and document the fix.",
+      "assigneeId": "user_admin",
+      "dueDate": "",
+      "priority": "High",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-09T19:34:31.685Z"
+    },
+    {
+      "id": "card_setup",
+      "boardId": "board_sprint",
+      "columnId": "col_sprint_done",
+      "title": "Create project board",
+      "description": "Seed default columns and invite the first users.",
+      "assigneeId": "user_admin",
+      "dueDate": "",
+      "priority": "Low",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-09T19:34:31.685Z"
+    },
+    {
+      "id": "card_campaign",
+      "boardId": "board_marketing",
+      "columnId": "col_marketing_todo",
+      "title": "Plan launch campaign",
+      "description": "Prepare campaign goals, target audience, and launch checklist.",
+      "assigneeId": "user_admin",
+      "dueDate": "",
+      "priority": "High",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-09T19:45:31.760Z"
+    },
+    {
+      "id": "card_social",
+      "boardId": "board_marketing",
+      "columnId": "col_marketing_doing",
+      "title": "Schedule social posts",
+      "description": "Create one week of posts for LinkedIn, Instagram, and X.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Medium",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-09T19:45:31.762Z"
+    },
+    {
+      "id": "card_brand",
+      "boardId": "board_marketing",
+      "columnId": "col_marketing_done",
+      "title": "Collect brand assets",
+      "description": "Upload logo, color palette, and approved product screenshots.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Low",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-09T19:45:31.762Z"
+    },
+    {
+      "id": "card_wireframes",
+      "boardId": "board_mobile",
+      "columnId": "col_mobile_todo",
+      "title": "Design onboarding wireframes",
+      "description": "Create simple mobile onboarding screens before implementation.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "High",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-09T19:45:31.762Z"
+    },
+    {
+      "id": "card_push",
+      "boardId": "board_mobile",
+      "columnId": "col_mobile_doing",
+      "title": "Build push notification settings",
+      "description": "Allow users to enable or disable reminder notifications.",
+      "assigneeId": "user_admin",
+      "dueDate": "",
+      "priority": "Medium",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-09T19:45:31.762Z"
+    },
+    {
+      "id": "card_release",
+      "boardId": "board_mobile",
+      "columnId": "col_mobile_done",
+      "title": "Prepare beta release notes",
+      "description": "Write a short release summary for internal testers.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Low",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-09T19:45:31.762Z"
+    },
+    {
+      "id": "card_research",
+      "boardId": "board_roadmap",
+      "columnId": "col_roadmap_todo",
+      "title": "Interview power users",
+      "description": "Collect feature requests from five active users.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "High",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_specs",
+      "boardId": "board_roadmap",
+      "columnId": "col_roadmap_doing",
+      "title": "Draft roadmap specs",
+      "description": "Turn research notes into quarterly product themes.",
+      "assigneeId": "user_admin",
+      "dueDate": "",
+      "priority": "Medium",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_votes",
+      "boardId": "board_roadmap",
+      "columnId": "col_roadmap_done",
+      "title": "Prioritize feature votes",
+      "description": "Rank ideas by user impact and implementation effort.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Low",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_triage",
+      "boardId": "board_support",
+      "columnId": "col_support_todo",
+      "title": "Triage open tickets",
+      "description": "Sort new support tickets by severity and owner.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "High",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_kb",
+      "boardId": "board_support",
+      "columnId": "col_support_doing",
+      "title": "Update help center article",
+      "description": "Refresh the setup guide with the latest screenshots.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Medium",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_feedback",
+      "boardId": "board_support",
+      "columnId": "col_support_done",
+      "title": "Summarize feedback themes",
+      "description": "Share weekly customer feedback highlights with the team.",
+      "assigneeId": "user_admin",
+      "dueDate": "",
+      "priority": "Low",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_leads",
+      "boardId": "board_sales",
+      "columnId": "col_sales_todo",
+      "title": "Qualify inbound leads",
+      "description": "Review demo requests and assign next steps.",
+      "assigneeId": "user_admin",
+      "dueDate": "",
+      "priority": "High",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_proposals",
+      "boardId": "board_sales",
+      "columnId": "col_sales_doing",
+      "title": "Prepare pricing proposals",
+      "description": "Create tailored proposals for shortlisted accounts.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Medium",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_followups",
+      "boardId": "board_sales",
+      "columnId": "col_sales_done",
+      "title": "Send follow-up emails",
+      "description": "Confirm action items after completed discovery calls.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Low",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_topics",
+      "boardId": "board_content",
+      "columnId": "col_content_todo",
+      "title": "Pick blog topics",
+      "description": "Choose three article ideas for the next content sprint.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Medium",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_draft",
+      "boardId": "board_content",
+      "columnId": "col_content_doing",
+      "title": "Draft launch blog",
+      "description": "Write the first version of the launch announcement.",
+      "assigneeId": "user_admin",
+      "dueDate": "",
+      "priority": "High",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_publish",
+      "boardId": "board_content",
+      "columnId": "col_content_done",
+      "title": "Publish newsletter",
+      "description": "Send this week's update to the subscriber list.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Low",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_regression",
+      "boardId": "board_qa",
+      "columnId": "col_qa_todo",
+      "title": "Run regression checklist",
+      "description": "Validate login, board creation, card editing, and drag/drop.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "High",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_bugs",
+      "boardId": "board_qa",
+      "columnId": "col_qa_doing",
+      "title": "Verify bug fixes",
+      "description": "Retest recently fixed issues before release.",
+      "assigneeId": "user_admin",
+      "dueDate": "",
+      "priority": "Medium",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_signoff",
+      "boardId": "board_qa",
+      "columnId": "col_qa_done",
+      "title": "Complete release sign-off",
+      "description": "Confirm the demo build is ready for review.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Low",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_env",
+      "boardId": "board_devops",
+      "columnId": "col_devops_todo",
+      "title": "Document environment variables",
+      "description": "List required deployment variables and sample values.",
+      "assigneeId": "user_admin",
+      "dueDate": "",
+      "priority": "Medium",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_pipeline",
+      "boardId": "board_devops",
+      "columnId": "col_devops_doing",
+      "title": "Check deployment pipeline",
+      "description": "Make sure the hosting start command and port are correct.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "High",
+      "createdBy": "user_admin",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    },
+    {
+      "id": "card_backup",
+      "boardId": "board_devops",
+      "columnId": "col_devops_done",
+      "title": "Back up demo data",
+      "description": "Keep a copy of the seeded JSON database for restore testing.",
+      "assigneeId": "user_member",
+      "dueDate": "",
+      "priority": "Low",
+      "createdBy": "user_member",
+      "updatedAt": "2026-06-11T16:26:50.980Z"
+    }
+  ],
+  "activity": [
+    {
+      "id": "act_9326018ac665ba21",
+      "text": "Sesi S registered as a member.",
+      "createdAt": "2026-06-11T16:34:04.105Z"
+    },
+    {
+      "id": "act_d0be95cb0886799f",
+      "text": "User moved card \"Finalize sprint goals\" to To Do.",
+      "createdAt": "2026-06-11T16:33:52.417Z"
+    },
+    {
+      "id": "act_ff45718eac2d8d7c",
+      "text": "User moved card \"Finalize sprint goals\" to In Progress.",
+      "createdAt": "2026-06-11T16:33:33.483Z"
+    },
+    {
+      "id": "act_ba778af143166807",
+      "text": "CHALLA SMILE SOFIA registered as a member.",
+      "createdAt": "2026-06-09T19:38:36.618Z"
+    },
+    {
+      "id": "act_d181508c88a49700",
+      "text": "Admin deleted board \"Temporary QA Board\".",
+      "createdAt": "2026-06-09T19:37:03.947Z"
+    },
+    {
+      "id": "act_a40d80720bbbc22d",
+      "text": "Admin deleted user Temporary QA Admin.",
+      "createdAt": "2026-06-09T19:37:03.940Z"
+    },
+    {
+      "id": "act_a659bce7f37e5fbd",
+      "text": "Admin updated Temporary QA Admin's user profile.",
+      "createdAt": "2026-06-09T19:37:03.934Z"
+    },
+    {
+      "id": "act_f2fa7333b56054ed",
+      "text": "Admin added Temporary QA User as member.",
+      "createdAt": "2026-06-09T19:37:03.924Z"
+    },
+    {
+      "id": "act_233ab93ffe25d930",
+      "text": "Admin created board \"Temporary QA Board\".",
+      "createdAt": "2026-06-09T19:37:03.824Z"
+    },
+    {
+      "id": "act_d8d28a8d05f255db",
+      "text": "Admin deleted card \"Permission Check Card\".",
+      "createdAt": "2026-06-09T19:35:27.417Z"
+    },
+    {
+      "id": "act_9dee839b7f31061d",
+      "text": "Admin created card \"Permission Check Card\" on \"Website Redesign\".",
+      "createdAt": "2026-06-09T19:35:08.891Z"
+    },
+    {
+      "id": "act_12af603e9db15233",
+      "text": "Seeded demo users, boards, and cards.",
+      "createdAt": "2026-06-09T19:34:31.686Z"
+    }
+  ]
+}

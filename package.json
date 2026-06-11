@@ -1,0 +1,21 @@
+{
+  "name": "azentrix-fullstack-task2",
+  "version": "1.0.0",
+  "description": "Self-hostable multi-user task management system with real-time board updates.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "task-management",
+    "kanban",
+    "websocket",
+    "fullstack"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
